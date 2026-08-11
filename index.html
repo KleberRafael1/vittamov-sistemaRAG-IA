@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="VittaMov — Assistente virtual inteligente para informações sobre fisioterapia, quiropraxia e reabilitação."
+    >
+
+    <meta
+        name="theme-color"
+        content="#0f766e"
+    >
+
+    <title>VittaMov — Assistente Virtual</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ==================================================
+             CABEÇALHO
+        =================================================== -->
+
+        <header class="header">
+
+            <div class="brand">
+
+                <div
+                    class="brand-icon"
+                    aria-hidden="true"
+                >
+                    🏥
+                </div>
+
+                <div class="brand-info">
+
+                    <h1>VittaMov</h1>
+
+                    <p>
+                        Fisioterapia • Quiropraxia • Reabilitação
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Status da API -->
+
+            <div
+                class="status"
+                id="api-status"
+                aria-live="polite"
+            >
+
+                <span
+                    class="status-dot"
+                    aria-hidden="true"
+                ></span>
+
+                <span class="status-text">
+                    Verificando conexão...
+                </span>
+
+            </div>
+
+        </header>
+
+
+        <!-- ==================================================
+             CONTEÚDO PRINCIPAL
+        =================================================== -->
+
+        <main class="main">
+
+            <!-- ==================================================
+                 APRESENTAÇÃO
+            =================================================== -->
+
+            <section class="welcome">
+
+                <div
+                    class="welcome-icon"
+                    aria-hidden="true"
+                >
+                    🤖
+                </div>
+
+                <h2>
+                    Olá! Como posso ajudar?
+                </h2>
+
+                <p>
+                    Sou o assistente virtual da VittaMov.
+                    Posso responder perguntas sobre nossos serviços,
+                    especialidades, atendimentos, horários e outras
+                    informações disponíveis em nossa base de conhecimento.
+                </p>
+
+            </section>
+
+
+            <!-- ==================================================
+                 CHAT
+            =================================================== -->
+
+            <section
+                class="chat-container"
+                aria-label="Chat com o assistente VittaMov"
+            >
+
+                <div
+                    id="chat"
+                    class="chat"
+                    role="log"
+                    aria-live="polite"
+                    aria-label="Conversa"
+                >
+
+                    <!-- Mensagem inicial -->
+
+                    <div class="message assistant">
+
+                        <div
+                            class="message-avatar"
+                            aria-hidden="true"
+                        >
+                            🤖
+                        </div>
+
+                        <div class="message-content">
+
+                            <span class="message-author">
+                                VittaMov
+                            </span>
+
+                            <p>
+                                Faça uma pergunta sobre a clínica
+                                para começar.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==================================================
+                     ÁREA DE ENTRADA
+                =================================================== -->
+
+                <form
+                    id="question-form"
+                    class="input-area"
+                >
+
+                    <label
+                        for="question"
+                        class="sr-only"
+                    >
+                        Digite sua pergunta
+                    </label>
+
+                    <input
+                        type="text"
+                        id="question"
+                        name="question"
+                        placeholder="Digite sua pergunta..."
+                        autocomplete="off"
+                        maxlength="500"
+                        required
+                    >
+
+                    <button
+                        type="submit"
+                        id="send-button"
+                        aria-label="Enviar pergunta"
+                    >
+
+                        <span class="button-text">
+                            Enviar
+                        </span>
+
+                        <span
+                            class="send-icon"
+                            aria-hidden="true"
+                        >
+                            ➤
+                        </span>
+
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- ==================================================
+                 SUGESTÕES
+            =================================================== -->
+
+            <section
+                class="suggestions"
+                aria-label="Perguntas sugeridas"
+            >
+
+                <p>
+                    Experimente perguntar:
+                </p>
+
+                <div class="suggestion-buttons">
+
+                    <button
+                        type="button"
+                        class="suggestion"
+                    >
+                        A clínica oferece fisioterapia ortopédica?
+                    </button>
+
+                    <button
+                        type="button"
+                        class="suggestion"
+                    >
+                        Quanto tempo dura uma sessão?
+                    </button>
+
+                    <button
+                        type="button"
+                        class="suggestion"
+                    >
+                        Quais serviços a clínica oferece?
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- ==================================================
+             RODAPÉ
+        =================================================== -->
+
+        <footer class="footer">
+
+            <p>
+                VittaMov — Assistente baseado em
+                <strong>
+                    Retrieval-Augmented Generation (RAG)
+                </strong>
+            </p>
+
+            <p class="educational">
+                Projeto educacional — Challenge Alura Agente RAG
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <!-- ======================================================
+         JAVASCRIPT
+    ======================================================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
