@@ -2,7 +2,7 @@
 
 > **Projeto Educacional:** Todas as informações da Clínica VittaMov são fictícias e foram criadas exclusivamente para este projeto do **Challenge Alura Agente RAG**.
 
-Sistema de **Retrieval-Augmented Generation (RAG)** que simula um assistente virtual para a **Clínica VittaMov**, capaz de consultar uma base de conhecimento própria e responder perguntas com base nos documentos recuperados.
+Assistente virtual inteligente baseado em RAG, com agente de IA, busca semântica, banco vetorial ChromaDB, Google Gemini, API REST com FastAPI e interface web.
 
 ---
 
@@ -66,8 +66,7 @@ Abaixo estão as capturas de tela que mostram a interface do usuário e o funcio
 Challenge/
 │
 ├── chroma_db/                 # Diretório de persistência do ChromaDB
-├── chroma/
-│   └── db/
+│
 ├── documentos/
 │   └── base_conhecimento/
 │       └── vittamov.pdf       # Base de conhecimento em PDF
@@ -147,7 +146,7 @@ O agente foi instruído a seguir diretrizes rígidas:
 O projeto utiliza o **ChromaDB** para armazenamento e consulta vetorial dos *chunks* de texto.
 
 - **Coleção Principal:** `vittamov` **Volume de Dados:** 109 documentos/vetores indexados.
-- *(Nota: A coleção secundária `langchain` foi mantida apenas para histórico de testes e não é consultada pela aplicação em produção).*
+- *(Nota: A coleção secundária `langchain` foi mantida apenas para histórico de testes e utilizada pelo fluxo atual da aplicação).*
 
 ---
 
@@ -174,7 +173,7 @@ python src/test_chroma.py
 
 ### 1. Clonar o repositório
 ```bash
-git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+git clone https://github.com/KleberRafael1/vittamov-sistemaRAG-IA
 cd Challenge
 ```
 ### 2. Criar e ativar o ambiente virtual
@@ -214,7 +213,8 @@ python src/rag.py
 - [x] Integração completa com a API do Google Gemini
 - [x] Guardrails de escopo e alucinação validados em testes
 - [x] Rastreabilidade de fontes/documentos recuperados
-- [x] Interface gráfica de usuário.
+- [x] Interface gráfica de usuário
+- [x] API REST (FastAPI)
 
 ---
 
@@ -223,8 +223,7 @@ python src/rag.py
 - [ ] Memória conversacional de múltiplos turnos.
 - [ ] Métrica de avaliação de RAG (Ragas / TruLens).
 - [ ] Re-ranking de documentos para otimizar o contexto.
-- [ ] API REST (FastAPI) para integração com canais (WhatsApp/Web).
-
+ 
 ---
 
 ## 💻 Autor
